@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-black dark:via-black dark:to-black min-h-screen transition-colors duration-200 dark:text-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 dark:bg-gray-900/95 backdrop-blur-lg border border-white/20 dark:border-white/10 shadow-xl transition-colors duration-200 dark:text-white;
+  }
+  
+  .gradient-header {
+    @apply bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-black dark:to-black/60 text-white transition-colors duration-200;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-2 bg-white/50 dark:bg-gray-800 border border-gray-200 dark:border-white/10 rounded-lg 
+           focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-purple-500 focus:border-transparent
+           text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400
+           transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-indigo-600 dark:bg-purple-900/60 text-white rounded-lg 
+           hover:bg-indigo-700 dark:hover:bg-purple-800/60
+           focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-purple-500 focus:ring-offset-2
+           transition-all duration-200 disabled:opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20
+           focus:outline-none focus:ring-2 focus:ring-white/50
+           transition-all duration-200;
+  }
+
+  /* Dark mode text colors */
+  .dark .text-gray-900 {
+    @apply text-white;
+  }
+  
+  .dark .text-gray-700 {
+    @apply text-gray-300;
+  }
+  
+  .dark .text-gray-600 {
+    @apply text-gray-400;
+  }
+  
+  .dark .text-gray-500 {
+    @apply text-gray-400;
+  }
+  
+  .dark .text-indigo-600 {
+    @apply text-indigo-400;
+  }
+  
+  .dark .bg-gray-50 {
+    @apply bg-black/20 text-white;
+  }
+  
+  .dark .hover\:bg-gray-50:hover {
+    @apply hover:bg-white/5;
+  }
+  
+  .dark .bg-indigo-50 {
+    @apply bg-indigo-900/20;
+  }
+  
+  .dark .bg-white {
+    @apply bg-black/40;
+  }
+  
+  /* Dark mode form elements */
+  .dark input,
+  .dark textarea,
+  .dark select {
+    @apply bg-gray-800 text-white border-white/10;
+  }
+  
+  .dark input::placeholder,
+  .dark textarea::placeholder {
+    @apply text-gray-400;
+  }
+  
+  .dark option {
+    @apply bg-gray-900 text-white;
+  }
+}
